@@ -16,5 +16,9 @@ public class Tache {
     private float tarifHoraire;
     @Enumerated(EnumType.STRING)
     private TypeTache typetache;
+    @ManyToOne
+    @JoinColumn(name = "idEtudiant")
+    private Etudiant etudiant;
+
 
 }

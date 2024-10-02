@@ -3,6 +3,8 @@ package tn.esprit.springproj.entities;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.List;
+
 @Entity
 @Table(name = "etudiant")
 public class Etudiant {
@@ -15,4 +17,10 @@ public class Etudiant {
     private String ecole;
     @Temporal(TemporalType.DATE)
     private Date dateNaissance;
+    @OneToMany(mappedBy = "etudiant", cascade = CascadeType.ALL)
+    private List<Tache> taches;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Reservation> reservations;
+
 }

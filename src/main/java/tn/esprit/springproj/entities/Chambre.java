@@ -11,4 +11,7 @@ public class Chambre {
     private long numeroChambre;
     @Enumerated(EnumType.STRING)
     private TypeChambre typeC;
+    @ManyToOne
+    private Bloc bloc;
+
 }
