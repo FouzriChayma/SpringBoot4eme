@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "etudiant")
@@ -18,9 +19,13 @@ public class Etudiant {
     @Temporal(TemporalType.DATE)
     private Date dateNaissance;
     @OneToMany(mappedBy = "etudiant", cascade = CascadeType.ALL)
-    private List<Tache> taches;
+    private Set<Tache> taches;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    private List<Reservation> reservations;
+    private Set<Reservation> reservations;
+    @Enumerated(EnumType.STRING)
+    private TypeEtudiant typeEtudiant;
 
+    @OneToOne(mappedBy = "etudiantA")
+    private Tache tache;
 }

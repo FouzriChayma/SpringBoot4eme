@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "reservation")
@@ -14,7 +15,6 @@ public class Reservation {
     private Date anneeUniversitaire;
     private boolean estValide = true;
     @ManyToMany(mappedBy = "reservations")
-    private List<Etudiant> etudiants;
-    @ManyToOne
-    private Chambre chambre;
+    private Set<Etudiant> etudiants;
+
 }

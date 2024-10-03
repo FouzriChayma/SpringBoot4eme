@@ -17,8 +17,9 @@ public class Tache {
     @Enumerated(EnumType.STRING)
     private TypeTache typetache;
     @ManyToOne
-    @JoinColumn(name = "idEtudiant")
     private Etudiant etudiant;
+    @OneToOne(mappedBy ="tache" )
+    private Etudiant etudiantA;
 
 
 }

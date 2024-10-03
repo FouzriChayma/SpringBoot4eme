@@ -3,6 +3,7 @@ package tn.esprit.springproj.entities;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "foyer")
@@ -15,5 +16,5 @@ public class Foyer {
     @OneToOne
     private Universite universite;
     @OneToMany(mappedBy = "foyer")
-    private List<Bloc> blocs;
+    private Set<Bloc> blocs;
 }
