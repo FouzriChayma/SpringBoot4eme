@@ -13,7 +13,7 @@ public class Bloc {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idBloc; //far9 bin long w Long theny nkhdmo bih chnaaamlo far9
     private String nomBloc;
-    private long capaciteBloc;
+    private Long capaciteBloc;
     @ManyToOne
     private Foyer foyer;
     @OneToMany(mappedBy = "bloc")

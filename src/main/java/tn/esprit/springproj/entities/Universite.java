@@ -9,7 +9,7 @@ import java.util.List;
 public class Universite {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idUnivesite;
+    private Long idUnivesite;
     private String nomUniversite;
     private String adresse;
     @OneToOne(mappedBy = "universite") //'universite' aham hk aaleh hatina mappedby fiha moch fl foyer

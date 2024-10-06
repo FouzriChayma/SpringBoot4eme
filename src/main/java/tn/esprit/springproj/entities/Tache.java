@@ -10,7 +10,7 @@ import java.time.LocalDate;
 public class Tache {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idTache;
+    private Long idTache;
     private LocalDate dateTache;
     private Integer duree;
     private float tarifHoraire;

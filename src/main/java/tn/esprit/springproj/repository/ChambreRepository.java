@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface ChambreRepository extends JpaRepository<Chambre,Long> {
     List<Chambre> findByBlocNomBloc(String nom);
+    Bloc findByNumeroChambre(Long numeroChambre);
 }
