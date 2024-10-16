@@ -18,7 +18,7 @@ public class Tache {
     private TypeTache typetache;
     @ManyToOne
     private Etudiant etudiant;
-    @OneToOne(mappedBy ="tache" )
+    @OneToOne
     private Etudiant etudiantA;
 
 
