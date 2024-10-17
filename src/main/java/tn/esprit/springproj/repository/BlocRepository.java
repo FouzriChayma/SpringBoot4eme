@@ -4,10 +4,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 import tn.esprit.springproj.entities.Bloc;
 
 import java.util.List;
 
+@Repository
 public interface BlocRepository extends JpaRepository<Bloc,Long> {
 // cntr + nnzl aal CrudRepository chtt7ali nra ces methodes save , ...
 //fama zeda PagingAndSortingRepository fiha pageable

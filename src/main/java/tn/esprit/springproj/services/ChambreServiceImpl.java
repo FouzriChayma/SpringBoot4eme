@@ -1,11 +1,14 @@
 package tn.esprit.springproj.services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.springproj.entities.Chambre;
 import tn.esprit.springproj.repository.ChambreRepository;
 
 import java.util.List;
-
-public class ChambreServiceImpl {
+@Service
+@AllArgsConstructor
+public class ChambreServiceImpl implements IChambreService {
     ChambreRepository chambreRepository;
     public List<Chambre> retrieveAllChambres() {
         return chambreRepository.findAll();

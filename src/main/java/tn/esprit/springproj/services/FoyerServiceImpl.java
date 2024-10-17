@@ -1,10 +1,14 @@
 package tn.esprit.springproj.services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.springproj.entities.Foyer;
 import tn.esprit.springproj.repository.FoyerRepository;
 
 import java.util.List;
 // ki tjini erreur n implimnter les methodes lkol base khtr nimplimenty mn interface
+@Service
+@AllArgsConstructor
 public class FoyerServiceImpl implements IFoyerService{
 
     FoyerRepository foyerRepository;
